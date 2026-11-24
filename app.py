@@ -52,7 +52,7 @@ class MakeupWorld:
       print("No file found")
       return
     value=input(f"Enter the {field.lower()} to search product: ").strip()
-    pattern = rf"(?i)^{re.escape(field)}:\s*{re.escape(value)}$"
+    pattern = rf"(?i)^{re.escape(field)}:\s*.*{re.escape(value)}.*$"
     block=[]
     found=False
     for line in lines:
